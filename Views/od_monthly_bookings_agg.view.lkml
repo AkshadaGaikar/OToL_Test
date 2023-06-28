@@ -16,9 +16,9 @@ view: od_monthly_bookings_agg {
 
    dimension: Departure_Month {
     type: date_month
-    hidden: yes
+    #hidden: yes
     #view_label: "O&D Departure Month"
-    sql: ${TABLE}.DEPARTURE_DATE ;;
+    sql: Cast(${TABLE}.DEPARTURE_DATE as Timestamp);;
   }
 
  #----------------------------------------------------------
